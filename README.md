@@ -1,0 +1,18 @@
+# Parcel Bundler
+- Dev Builder
+- Local Server
+- HMR = Hot Module Replacement - Written in C++
+- Caching - Faster Builds
+- Image Optimization
+- Minification
+- Bundling
+- Compressing
+- Consistent Hashing
+- Code Splitting
+- Differential Bundling - Support older browsers
+- Diagnostices
+- Error Handling
+- HTTPs Testing 
+- Tree Shaking - Remove unused code
+- Lazy Mode
+- Different Dev & Production bundles

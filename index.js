@@ -1,18 +1,5 @@
-/* 
-Nested Structurre in React 
-
-<div id="parent">
-    <div class="child1">
-        <h1 id="h1">Heading 1</h1>
-        <h1 id="h2">Heading 2</h1>
-    </div>
-    <div class="child2">
-        <h1 id="h1">Heading 1</h1>
-        <h1 id="h2">Heading 2</h1>
-    </div>
-</div>
-
-*/
+import React from "react";
+import ReactDOM from "react-dom/client"
 
 const parent = React.createElement(
     "div", 
