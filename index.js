@@ -1,19 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client"
 
-const parent = React.createElement(
-    "div", 
-    {id: "parent"}, [
-        React.createElement( "div", {id:"child1"}, [
-            React.createElement( "h1", {}, "Heading 1"),
-            React.createElement( "h2", {}, "Heading 2")
-        ]),
-        React.createElement( "div", {id:"child2"}, [
-            React.createElement( "h1", {}, "Heading 1"),
-            React.createElement( "h2", {}, "Heading 2")
-        ])
-    ]
-)
+// React.createElement => ReactElement (JS Object) => Render on DOM => HTML Element
+// JSX => React.createElement => ReactElement (JS Object) => Render on DOM => HTML Element
+const jsxHeading = <h1 id="heading">Hello World from JSX</h1> 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent); 
+
+root.render(jsxHeading)
