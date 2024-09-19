@@ -9,7 +9,23 @@ class UserClass extends React.Component {
 
     this.state = {
       //count: 0,
+      userInfo: {
+        name: "Dummy User",
+        location: "Default",
+        avatar_url: "https://dummyurl.com",
+      },
     };
+  }
+
+  async componentDidMount() {
+    //console.log(this.props.name + " Child Component Did Mount");
+    const data = await fetch("https://api.github.com/users/ShaneDsouza4");
+    const json = await data.json();
+
+    console.log("Data: ", json);
+    this.setState({
+      userInfo: json,
+    });
   }
 
   render() {
@@ -19,26 +35,19 @@ class UserClass extends React.Component {
 
     return (
       <div className="user-card">
-        <button
-          onClick={() => {
-            this.setState({
-              //count: this.state.count + 1,
-            });
-          }}
-        >
-          Increase Count
-        </button>
-
-        <h2>Name: {name}</h2>
-        <h3>Location: {location}</h3>
+        <img src={this.state.userInfo.avatar_url} />
+        <h2>Name: {this.state.userInfo.name}</h2>
+        <h3>Location: {this.state.userInfo.location}</h3>
         <h4>Contact: @shane.json</h4>
       </div>
     );
   }
 
-  componentDidMount() {
-    //console.log(this.props.name + " Child Component Did Mount");
+  componentDidUpdate() {
+    console.log("Component Did Update  ");
   }
+
+  componentWillUnmount() {}
 }
 
 export default UserClass;
