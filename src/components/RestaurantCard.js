@@ -1,7 +1,7 @@
 import { CDN_URL } from "../../utils/contants";
 
 const styleCard = {
-  backgroundColor: "wheat",
+  backgroundColor: "#f0f0f0",
 };
 
 const RestaturantCard = (props) => {
