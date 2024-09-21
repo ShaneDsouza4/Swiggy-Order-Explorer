@@ -47,7 +47,9 @@ class UserClass extends React.Component {
     console.log("Component Did Update  ");
   }
 
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    console.log("Component Will Unmount");
+  }
 }
 
 export default UserClass;
