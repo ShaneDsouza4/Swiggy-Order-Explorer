@@ -3,6 +3,7 @@ import resDataAPI from "../../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlinStatus from "../../utils/useOnlineStatus";
 
 const Body = () => {
   const [restaurantList, setrestaurantList] = useState([]);
@@ -31,6 +32,12 @@ const Body = () => {
       json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+
+  const onlinStatus = useOnlinStatus();
+  if (onlinStatus == false)
+    return (
+      <h1>Looks like you're offline. Please check your internet connection</h1>
+    );
 
   if (restaurantList.length == 0) return <Shimmer />;
 
