@@ -1,9 +1,5 @@
 import { CDN_URL } from "../../utils/contants";
 
-const styleCard = {
-  backgroundColor: "#f0f0f0",
-};
-
 const RestaturantCard = (props) => {
   const { resData } = props;
 
