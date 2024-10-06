@@ -8,7 +8,7 @@ const RestaturantCard = (props) => {
   const { slaString } = resData?.info?.sla;
 
   return (
-    <div className="m-4 p-4 w-[250px] rounded-lg bg-[#f0f0f0] hover:bg-green-100">
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-[#f0f0f0] hover:bg-red-100">
       <img
         className="rounded-lg"
         alt="res-logo"
