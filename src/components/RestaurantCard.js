@@ -22,4 +22,18 @@ const RestaturantCard = (props) => {
   );
 };
 
+//Higher order function
+export const withPromotedLabel = (RestaturantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">
+          Open
+        </label>
+        <RestaturantCard {...props} />
+      </div>
+    );
+  };
+};
+
 export default RestaturantCard;
