@@ -4,10 +4,12 @@ import { useState } from "react";
 const RestaurantCategory = (props) => {
   const { data } = props;
 
-  const [showItems, setShowItems] = useState(false);
+  const { showItems } = props;
+
+  //const [showItems, setShowItems] = useState(false);
 
   const handleClick = () => {
-    showItems ? setShowItems(false) : setShowItems(true);
+    setShowItems(!showItems);
     console.log("Clicked");
   };
 

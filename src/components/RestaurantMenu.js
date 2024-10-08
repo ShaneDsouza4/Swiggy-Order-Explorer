@@ -34,7 +34,11 @@ const RestaurantMenu = () => {
       {/* Accordian for categories */}
       {catergory.map((x, index) => (
         /* Accordian Header */
-        <RestaurantCategory key={index} data={x?.card?.card} />
+        <RestaurantCategory
+          key={index}
+          data={x?.card?.card}
+          showItems={false}
+        />
       ))}
     </div>
   );
