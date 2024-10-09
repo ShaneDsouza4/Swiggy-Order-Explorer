@@ -11,7 +11,7 @@ const ItemList = ({ items, dummyData }) => {
         >
           <div className="w-9/12">
             <div className="py-2">
-              <span>{dummyData}</span>
+              {/* <span>{dummyData}</span> */}
               <span>{x.card.info.name}</span>
               <span> ${x.card.info.price / 100}</span>
             </div>
