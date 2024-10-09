@@ -6,11 +6,16 @@ const RestaurantCategory = (props) => {
 
   const { showItems } = props;
 
+  const { setShowIndex } = props;
+
+  const { key2 } = props;
+
   //const [showItems, setShowItems] = useState(false);
 
   const handleClick = () => {
-    setShowItems(!showItems);
-    console.log("Clicked");
+    setShowIndex();
+    // setShowItems(!showItems);
+    console.log("Clicked", key2);
   };
 
   //console.log(">>", data);
