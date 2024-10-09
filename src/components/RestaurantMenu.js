@@ -5,6 +5,8 @@ import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 
 const RestaurantMenu = () => {
+  const dummyData = "DummyText";
+
   const { resId } = useParams();
 
   const restaurantInfo = useRestaurantMenu(resId);
@@ -46,6 +48,7 @@ const RestaurantMenu = () => {
             console.log("-->", index);
           }}
           key2={index}
+          dummyData={dummyData}
         />
       ))}
     </div>

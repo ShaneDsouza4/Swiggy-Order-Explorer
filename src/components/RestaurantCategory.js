@@ -10,6 +10,8 @@ const RestaurantCategory = (props) => {
 
   const { key2 } = props;
 
+  const { dummyData } = props;
+
   //const [showItems, setShowItems] = useState(false);
 
   const handleClick = () => {
@@ -33,7 +35,9 @@ const RestaurantCategory = (props) => {
           <span>⬇️</span>
         </div>
 
-        {showItems && <ItemList items={data.itemCards}></ItemList>}
+        {showItems && (
+          <ItemList items={data.itemCards} dummyData={dummyData}></ItemList>
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { CDN_URL } from "../../utils/contants";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, dummyData }) => {
   //console.log("//>", items);
   return (
     <div>
@@ -11,6 +11,7 @@ const ItemList = ({ items }) => {
         >
           <div className="w-9/12">
             <div className="py-2">
+              <span>{dummyData}</span>
               <span>{x.card.info.name}</span>
               <span> ${x.card.info.price / 100}</span>
             </div>
