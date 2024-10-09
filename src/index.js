@@ -10,13 +10,31 @@ import RestaurantMenu from "./components/RestaurantMenu";
 //import Grocery from "./components/Grocery";
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => import("./components/About"));
+import { useState, useEffect } from "react";
+import UserContext from "../utils/UserContext";
 
 const AppLayout = () => {
+  //authentication
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    //Made API call and sent username and password
+    //Got data
+    const data = {
+      name: "Shane Redd",
+    };
+    setUserName(data.name);
+  });
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName }}>
+      <div className="app">
+        <UserContext.Provider value={{ loggedInUser: "Elon Musk" }}>
+          <Header />
+        </UserContext.Provider>
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
