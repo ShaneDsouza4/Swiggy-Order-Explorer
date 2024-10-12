@@ -11,7 +11,7 @@ const Header = () => {
   const onlineStatus = useOnlinStatus();
 
   const { loggedInUser } = useContext(UserContext);
-  console.log(loggedInUser);
+  //console.log(loggedInUser);
 
   useEffect(() => {
     //console.log("useEffect called.");
