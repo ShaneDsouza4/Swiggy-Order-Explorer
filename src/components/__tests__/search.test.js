@@ -52,7 +52,7 @@ it("Should filter top retaurants", async () => {
   fireEvent.click(topRatedBtn);
 
   const cards = screen.getAllByTestId("resCard");
-  console.log(cards.length);
+  //console.log(cards.length);
 
   expect(cards.length).toBe(6);
 });

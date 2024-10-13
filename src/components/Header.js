@@ -19,7 +19,7 @@ const Header = () => {
 
   // Subscribing to the redux store using a selector
   const cartItems = useSelector((store) => store.cart?.items);
-  console.log("cartItems: ", cartItems);
+  //console.log("cartItems: ", cartItems);
 
   return (
     <div className="flex justify-between bg-green-50 shadow-lg sm:bg-yellow-200">

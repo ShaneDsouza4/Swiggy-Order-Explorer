@@ -45,7 +45,7 @@ const RestaurantMenu = () => {
           showItems={index == showIndex ? true : false}
           setShowIndex={() => {
             setShowIndex(index);
-            console.log("-->", index);
+            //console.log("-->", index);
           }}
           key2={index}
           dummyData={dummyData}

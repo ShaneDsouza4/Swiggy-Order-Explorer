@@ -17,7 +17,7 @@ const RestaurantCategory = (props) => {
   const handleClick = () => {
     setShowIndex();
     // setShowItems(!showItems);
-    console.log("Clicked", key2);
+    //console.log("Clicked", key2);
   };
 
   //console.log(">>", data);
