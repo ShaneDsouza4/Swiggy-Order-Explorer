@@ -45,7 +45,7 @@ it("Should render Restaurant Menu component", async () => {
 
   //Find Add Buttons
   const addBtns = screen.getAllByRole("button", { name: "Add +" });
-  console.log(addBtns.length);
+  //console.log(addBtns.length);
 
   //Click on first button
   fireEvent.click(addBtns[0]);
